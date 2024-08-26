@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    padding: 15px 0;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+.content {
+    padding-top: 80px; /* To make space for the fixed nav */
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+    background-color: #f3eeee;
+    border-bottom: 1px solid #ddd;
+}
+
+#home {
+    color: rgb(5, 5, 5);
+}
+#special-dishes{
+    background-image: url('American.jpg');
+    background-size: cover;
+}
+#contact{
+    background-color: black;
+    color: white;
+}
+
+.product-list, .featured-products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-item, .featured-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-item img, .featured-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-item:hover, .featured-item:hover {
+    transform: translateY(-10px);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background-color: #ff6347;
+}
+
+#navbar.scrolled {
+    background-color: #555;
+}
+/* styles.css */
+
+/* General styles for the nav */
+#navbar {
+    display: flex;
+    background-color: #333;
+    padding: 10px;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links ul li {
+    margin: 0 15px;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-icon {
+    display: none; /* Hide by default */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links ul li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #navbar.active .nav-links {
+        display: flex;
+    }
+}
